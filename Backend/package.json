@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve":"nodemon ./index.js",
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/AymenRachid/Jibli/issues"
   },
-  "homepage": "https://github.com/AymenRachid/Jibli#readme"
+  "homepage": "https://github.com/AymenRachid/Jibli#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
 }
