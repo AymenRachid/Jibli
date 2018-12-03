@@ -6,6 +6,7 @@ const OffersSchema = mongoose.Schema({
     Date: Date.now(),
     image: String,
     description: String,
+    
 });
 
 const OffersModel = mongoose.model('Offers', OffersSchema);

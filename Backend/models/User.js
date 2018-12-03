@@ -6,9 +6,10 @@ const UserSchema = mongoose.Schema({
     password: String,
     phoneNumber: String,
     address: String,
-    offers: Array
+    offers: Array,
+    Demands: Array,
+ 
 });
 
-const UserModel = mongoose.model('Offers', UserSchema);
-
+const UserModel = mongoose.model('user', UserSchema);
 module.exports = UserModel;
