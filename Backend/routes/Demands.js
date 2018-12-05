@@ -2,9 +2,10 @@ const express = require('express')
 const router = express.Router();
 
 const Demands = require('../models/Demands')
+const User = require('../models/User');
 
 router.get('/Demands', function(req, res){
-    offers.find({}, (err, Demands)=>{
+    Demands.find({}, (err, Demands)=>{
         res.json(Demands)
     })
 })
@@ -12,8 +13,12 @@ router.get('/Demands/:id', (req, res)=>{
     Demands.findById(req.params.id, (err, result)=>{
         res.json(result)
     })
+})
+router.delete('/demands/:id',(req,res)=>{
+    res.send({type:'Demand Deleted'})
+})
 router.post('demands',(req,res)=>{
-var demand = new demand ({
+var demand = new Demands ({
 price: req.body.price,
 name: req.body.name,
 image: req.body.image,
@@ -32,5 +37,5 @@ demand.save(demand, (err, result)=>{
 })
 
 }) 
-})
+
 module.exports = router
