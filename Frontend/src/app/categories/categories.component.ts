@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-
+  category: Array<String>;
   constructor() { }
 
   ngOnInit() {
+    this.category = ['High Tech', 'Drugs', 'Slaves']
   }
 
 }

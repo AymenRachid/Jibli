@@ -1,32 +1,42 @@
 <div class="container">
 
   <form role="form" style="width:400px; height: 40px; margin: 0 auto;">
-    <h1>Post something</h1>
+    <h1>Post an Offer or Demand</h1>
 
-    <div class="required-field-block">
+    <div class="required-field-block row">
       <input type="text" placeholder="Product Name" class="form-control">
       <div class="required-icon">
         <div class="text">*</div>
       </div>
     </div>
-
-    <div class="required-field-block">
+    <div class="required-field-block row">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{type}}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" (click)="swapType()" style="cursor:pointer">{{otherType}}</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="required-field-block row">
       <input type="text" placeholder="Price" class="form-control">
       <div class="required-icon">
         <div class="text">*</div>
       </div>
     </div>
-
-    <input type="text" placeholder="Phone" class="form-control">
-
-
-    <div class="required-field-block">
+    <div class="required-field-block row">
+      <input type="text" placeholder="Phone" class="form-control">
+    </div>
+    <br>
+    <div class="required-field-block row">
       <textarea rows="3" class="form-control" placeholder="Description"></textarea>
       <div class="required-icon">
         <div class="text">*</div>
       </div>
     </div>
 
-    <button class="btn btn-primary">Post</button>
+    <button class="btn btn-primary row">Post</button>
   </form>
 </div>
