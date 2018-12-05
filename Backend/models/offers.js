@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const OffersSchema = mongoose.Schema({
     price: String,
     name: String,
-    Date: Date.now(),
+    Date: Date,
     image: String,
     description: String,
     

@@ -13,3 +13,5 @@ router.get('/Demands/:id', (req, res)=>{
         res.json(result)
     })
 })
+
+module.exports = router

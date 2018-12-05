@@ -14,6 +14,9 @@ router.get('/offers/:id', (req, res)=>{
         res.json(result)
     })
 })
+router.delete('/offers/:id',(req,res)=>{
+    res.send({type:'Offer Deleted'})
+})
 router.post('/offers', (req,res)=>{
     var offer = new offers({
         price: req.body.price,
@@ -21,11 +24,16 @@ router.post('/offers', (req,res)=>{
         image: req.body.image,
         description: req.body.description,
     })
-    offer.save(offer, (result, err)=>{
+    offer.save(offer, (err, result)=>{
         var id = result._id;
-        User.findById(req.body.id, (result, err)=>{
+        User.findById(req.body.id, (err, result)=>{
             result.offers.push(id);
+            result.save(result, (err, result)=>{
+                res.send(result);
+            })
         })
     })
    
 })
+
+module.exports = router

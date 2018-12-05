@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose')
+const user = require('./routes/User');
+const offers = require('./routes/offers');
+const demands = require('./routes/Demands');
+const bodyParser = require('body-parser')
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/jibli')
@@ -9,6 +14,11 @@ mongoose.connect('mongodb://localhost:27017/jibli')
     console.log(err);
   }
 })
+app.use(bodyParser.json())
+
+app.use('/api', user);
+app.use('/api', offers);
+app.use('/api', demands);
 
 
 app.get('/',  (req, res) => {
