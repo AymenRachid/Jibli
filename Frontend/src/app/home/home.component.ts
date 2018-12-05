@@ -8,12 +8,12 @@ import { Item } from '../Models/Item';
 })
 export class HomeComponent implements OnInit {
 
-  items:Item[];
+  items:Array<String>;
   
   constructor() { }
 
   ngOnInit() {
-    
+    this.items = ['High Tech', 'Drugs', 'Slaves']
     
   }
 

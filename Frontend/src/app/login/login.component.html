@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 col-md-offset-12">
       <div class="panel panel-login">
         <div class="panel-heading">
           <div class="row">
             <div class="col-md-6">
-              <a  [class.active]="login" id="login-form-link" (click)="showLogin()">Login</a>
+              <a  [class.active]="login" style="cursor:pointer" id="login-form-link" (click)="showLogin()">Login</a>
             </div>
             <div class="col-md-6">
-              <a  [class.active]="register"  id="register-form-link" (click)="showRegister()">Register</a>
+              <a  [class.active]="register" style="cursor:pointer" id="register-form-link" (click)="showRegister()">Register</a>
             </div>
           </div>
           <hr>
@@ -30,7 +31,7 @@
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
+                    <div class="col-sm-12 col-sm-offset-12">
                       <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login"
                         value="Log In">
                     </div>
@@ -64,7 +65,7 @@
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
+                    <div class="col-sm-12 col-sm-offset-12">
                       <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register"
                         value="Register Now">
                     </div>
