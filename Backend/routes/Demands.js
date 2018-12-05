@@ -18,6 +18,7 @@ price: req.body.price,
 name: req.body.name,
 image: req.body.image,
 description: req.body.description,
+date: date.now,
 })
 offer.save(demand, (result,err)=>{
 var id = result_id;
