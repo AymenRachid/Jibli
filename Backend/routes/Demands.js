@@ -15,8 +15,12 @@ router.get('/Demands/:id', (req, res)=>{
     })
 })
 router.delete('/demands/:id',(req,res)=>{
-    res.send({type:'Demand Deleted'})
-})
+    //  console.log(req.paramas.id);
+      Demands.findByIdAndRemove({_id: req.params.id}).then(function(demand){
+          res.send(demand);
+       //   res.send({type:'Demand Deleted'})
+      });
+    });
 router.post('/demands',(req,res)=>{
     var date = new Date();
     var demand = new Demands ({
