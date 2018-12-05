@@ -17,8 +17,9 @@ router.get('/Demands/:id', (req, res)=>{
 router.delete('/demands/:id',(req,res)=>{
     res.send({type:'Demand Deleted'})
 })
-router.post('demands',(req,res)=>{
-var demand = new Demands ({
+router.post('/demands',(req,res)=>{
+    var date = new Date();
+    var demand = new Demands ({
 price: req.body.price,
 name: req.body.name,
 image: req.body.image,

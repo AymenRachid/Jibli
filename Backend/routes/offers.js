@@ -15,8 +15,13 @@ router.get('/offers/:id', (req, res)=>{
     })
 })
 router.delete('/offers/:id',(req,res)=>{
-    res.send({type:'Offer Deleted'})
-})
+  //  console.log(req.paramas.id);
+    offers.findByIdAndRemove({_id: req.params.id}).then(function(offer){
+        res.send(offer);
+     //   res.send({type:'Offer Deleted'})
+    });
+   
+});
 router.post('/offers', (req,res)=>{
     var date = new Date();
        var offer = new offers({

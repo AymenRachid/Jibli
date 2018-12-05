@@ -22,6 +22,9 @@ router.post('/user', function(req,res){
     
 
 })
+router.delete('/User/:id',(req,res)=>{
+    res.send({type:'User Deleted'})
+})
 router.get('/User/:id', (req, res)=>{
     User.findById(req.params.id, (err, result)=>{
         res.json(result)
