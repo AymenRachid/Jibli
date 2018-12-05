@@ -20,6 +20,7 @@ router.post('/offers', (req,res)=>{
         name: req.body.name,
         image: req.body.image,
         description: req.body.description,
+        date: date.now,
     })
     offer.save(offer, (result, err)=>{
         var id = result._id;
