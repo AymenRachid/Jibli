@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require('../models/User')
 
-router.get('/login', function(req, res){
+router.get('/user', function(req, res){
     User.find({}, (err, User)=>{
         res.json(User)
     })
@@ -22,9 +22,15 @@ router.post('/user', function(req,res){
     
 
 })
+
 router.delete('/User/:id',(req,res)=>{
-    res.send({type:'User Deleted'})
-})
+    //  console.log(req.paramas.id);
+      User.findByIdAndRemove({_id: req.params.id}).then(function(user){
+          res.send(user);
+       //   res.send({type:'Offer Deleted'})
+      });
+     
+  });
 router.get('/User/:id', (req, res)=>{
     User.findById(req.params.id, (err, result)=>{
         res.json(result)
