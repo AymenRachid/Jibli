@@ -8,6 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PostComponent } from './post/post.component';
 
+import { ContactComponent } from './contact/contact.component';
+
+import { ListComponent } from './list/list.component';
+import { CategoriesComponent } from './categories/categories.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +21,12 @@ import { PostComponent } from './post/post.component';
     HomeComponent,
     LoginComponent,
     PostComponent,
+
+    ContactComponent,
+
+    ListComponent,
+    CategoriesComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ const UserSchema = mongoose.Schema({
     phoneNumber: String,
     address: String,
     offers: Array,
-    Demands: Array,
+    demands: Array,
  
 });
 
