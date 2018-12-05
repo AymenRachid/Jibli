@@ -10,4 +10,5 @@ const DemandsSchema = mongoose.Schema({
 
 const DemandsModel = mongoose.model('Demands', DemandsSchema);
 
-module.exports = DemandsModel;
+module.exports = DemandsModel; 
+
