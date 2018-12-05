@@ -17,7 +17,7 @@ var demand = new demand ({
 price: req.body.price,
 name: req.body.name,
 image: req.body.image,
-date: date.now,
+date: date.now(),
 
 description: req.body.description,
 })
