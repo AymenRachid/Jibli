@@ -18,12 +18,13 @@ router.delete('/offers/:id',(req,res)=>{
     res.send({type:'Offer Deleted'})
 })
 router.post('/offers', (req,res)=>{
-    var offer = new offers({
+    var date = new Date();
+       var offer = new offers({
         price: req.body.price,
         name: req.body.name,
         image: req.body.image,
         description: req.body.description,
-        date: date.now,
+        Date: date.getDate() + '/' + date.getMonth()+ '/' + date.getFullYear(),
     })
     offer.save(offer, (err, result)=>{
         var id = result._id;
