@@ -25,7 +25,8 @@ offer.save(demand, (result,err)=>{
 var id = result_id;
 User.findById(req.body.id, (result,err)=>{
 result.demands.push(id);
-
+result.save(result, (err, result)=>{
+    res.send(result);
 })
 
 })
