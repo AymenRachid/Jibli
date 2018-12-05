@@ -17,9 +17,8 @@ var demand = new demand ({
 price: req.body.price,
 name: req.body.name,
 image: req.body.image,
-date: date.now,
-
 description: req.body.description,
+date: date.now,
 })
 offer.save(demand, (result,err)=>{
 var id = result_id;
