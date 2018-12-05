@@ -13,5 +13,5 @@ const UserSchema = mongoose.Schema({
 
 const UserModel = mongoose.model('user', UserSchema);
 module.exports = UserModel;
-var importoffer = require('C:\Users\mohamed ben ahmed\Desktop\soft project\Jibli\Backend\models\offers.js')
+var importoffer = require('Backend\models\offers.js')
 offers= [JSON.parse(importoffer)];
