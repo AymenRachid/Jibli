@@ -10,7 +10,7 @@ export class CategoriesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.category = ['High Tech', 'Drugs', 'Slaves']
+    this.category = ['High Tech', 'Sports', 'Clothes','Medecin']
   }
 
 }

@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.items = ['High Tech', 'Drugs', 'Slaves']
+    this.items = ['High Tech', 'Medecin', 'Sports', 'Music','Clothes ']
     
   }
 
